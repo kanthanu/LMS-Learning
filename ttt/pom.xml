@@ -53,6 +53,16 @@
 
 				</configuration>
 
-			</plugin></plugins>
+			</plugin>
+			 
+        <plugin>
+          <groupId>org.jenkins-ci.tools</groupId>
+          <artifactId>maven-hpi-plugin</artifactId>
+         <!--  <version>1.95</version> -->
+         <version>1.486</version>
+        </plugin>
+      </plugins>
+			
+			
   </build>
 </project>
