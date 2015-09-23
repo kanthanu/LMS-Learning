@@ -51,6 +51,19 @@
 <configuration>
 <warSourceDirectory>WebContent</warSourceDirectory>
 <failOnMissingWebXml>false</failOnMissingWebXml>
+			<container>
+				<containerId>tomcat7.x</containerId>
+				<!-- <type>remote</type> -->
+			</container>
+			<configuration>          
+				<type>runtime</type>
+				<properties>
+					<username>admin</username>
+					<password></password>
+					<url>http://localhost:9200/manager</url>
+				</properties>
+			</configuration>
+
 </configuration>
 </plugin>
     
