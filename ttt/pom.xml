@@ -64,14 +64,14 @@
          <!--  <version>1.95</version> -->
          <version>1.486</version>
         </plugin>
-        <plugin>
+        <!-- <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.3-SNAPSHOT</version>
         <configuration>
           <server>myserver</server>
         </configuration>
-      </plugin>
+      </plugin> -->
       </plugins>
 			
 			
