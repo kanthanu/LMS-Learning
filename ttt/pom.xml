@@ -7,11 +7,63 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ttt Maven Webapp</name>
   <url>http://maven.apache.org</url>
-   <properties>
-  <jsp.version>2.2</jsp.version>
-		<jstl.version>1.2</jstl.version>
-		<servlet.version>2.5</servlet.version>
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>4.1.0.RELEASE</spring.version>
+
+		<slf4j.version>1.5.10</slf4j.version>
+
+		<slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
+
+		<java.version>1.8</java.version>
+
+		<junit.version>4.8.2</junit.version>
+
+		<org.aspectj-version>1.8.1</org.aspectj-version>
+		<jettyVersion>7.5.4.v20111024</jettyVersion>
+
+		<!-- <org.cloudfoundry-version>0.6.1</org.cloudfoundry-version> <org.cloudfoundry-version>0.6.1</org.cloudfoundry-version> -->
+
+		<org.springframework-version>3.1.0.M1</org.springframework-version>
+
+		<org.aspectj-version>1.6.9</org.aspectj-version>
+
+		<org.slf4j-version>1.5.10</org.slf4j-version>
+
+		<rabbitmq.version>2.3.1</rabbitmq.version>
+
+		<spring.amqp.version>1.0.0.RC1</spring.amqp.version>
   </properties>
+
+  <repositories>
+
+		<repository>
+			<id>sonatype</id>
+			<name>Sonatype Groups</name>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</repository>
+
+		<repository>
+
+
+			<id>org.springframework.maven.milestone</id>
+
+			<name>Spring Maven Milestone Repository</name>
+
+			<url>http://maven.springframework.org/milestone</url>
+
+
+			<snapshots>
+
+				<enabled>false</enabled>
+
+			</snapshots>
+
+		</repository>
+
+	</repositories>
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -22,14 +74,20 @@
      <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>${servlet.version}</version>
+			<version>2.3</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
+
 			<groupId>javax.servlet.jsp</groupId>
+
 			<artifactId>jsp-api</artifactId>
-			<version>${jsp.version}</version>
+
+			<version>2.1</version>
+
 			<scope>provided</scope>
+
 		</dependency>
   </dependencies>
   <build>
@@ -70,6 +128,61 @@
           <server>myserver</server>
         </configuration>
       </plugin> -->
+      
+     <!--  <cloud> -->
+     <plugin>
+
+				<groupId>org.foundry</groupId>
+
+				<artifactId>cf-maven-plugin</artifactId>
+
+				<version>1.0.0</version>
+
+
+				<configuration>
+
+					<!-- Change this settings with your CF information -->
+
+
+					<server>Pivotal Cloud Foundry</server>
+
+				<target>http://api.run.pivotal.io</target>
+
+					<org>cloudemc</org>
+
+					<space>development</space>
+
+					<appname>ttt</appname>
+
+					<url>ttt.cfapps.io</url>
+
+					<memory>512</memory>
+
+
+					<services>
+
+
+						<service>
+
+							<name>ttt</name>
+
+							<label>ttt</label>
+
+							<provider>ttt</provider>
+
+							<version>n/a</version>
+
+							<plan>starter</plan>
+
+						</service>
+
+					</services>
+
+				</configuration>
+
+			</plugin>
+      
+     
       </plugins>
 			
 			
