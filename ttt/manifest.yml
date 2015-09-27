@@ -1,0 +1,8 @@
+---
+applications:
+- name: ttt
+  memory: 512M
+  instances: 1
+  host: ttt
+  domain: cfapps.io
+path : ttt.war

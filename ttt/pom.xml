@@ -90,6 +90,12 @@
 
 		</dependency>
   </dependencies>
+  <distributionManagement>
+  	<repository>
+  		<id>maven-repository</id>
+  		<url>${github.maven.repository}</url>
+  	</repository>
+  </distributionManagement>
   <build>
     <finalName>ttt</finalName>
    <!--  <sourceDirectory>src</sourceDirectory> -->
