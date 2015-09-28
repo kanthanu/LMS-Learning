@@ -89,20 +89,18 @@
 			<scope>provided</scope>
 
 		</dependency>
-		
   </dependencies>
  <distributionManagement>
     <snapshotRepository>
-			<id>spring-snapshot</id>
-			<name>Spring Snapshot Repository</name>
-			<url>s3://maven.springframework.org/snapshot</url>
-		</snapshotRepository>
+      <id>repo-id</id>
+      <name>my snapshot repository</name>
+      <url>file:///ttttest/ttt/target/to/snapshot/repo</url>
+    </snapshotRepository>
     <repository>
-			<id>sonatype-ossrh-staging</id>
-			<name>Sonatype OSSRH</name>
-			<url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
-
+      <id>repo-id2</id>
+      <name>my repository</name>
+      <url>file:///ttttest/ttt/target/to/repo</url>
+    </repository>
   </distributionManagement>
   
   <build>
