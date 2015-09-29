@@ -5,3 +5,4 @@ applications:
   instances: 1
   host: ttt
   domain: cfapps.io
+  uri:   https://github.com/cloudfoundry/java-buildpack
